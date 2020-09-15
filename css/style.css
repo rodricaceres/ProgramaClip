@@ -1,0 +1,175 @@
+body{
+    background: #f5f1da;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+    margin: 0;
+    padding-bottom: 0px;
+}
+h1{
+    color: #7e7e83;
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+p{
+    margin-bottom: 1.6em;
+}
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+.header{
+    background: #1a1a2e;
+    color: #f6f5f5;
+    padding: 2rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+    .header a{
+        color: white;
+        text-decoration: none;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    flex-wrap: wrap;  
+}
+.menu-icon{
+    display: none;
+}
+.logo{
+    letter-spacing: 10px;
+    font-size: 1.2em;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+    .navigation ul li{
+        display: inline-block;       
+    }
+        .navigation ul li a{
+            padding: 0px 5px;
+            transition: all 0.2s linear;
+            border-radius: 5px;
+           
+        }
+            .navigation ul li a:hover{
+                background: #ee6f57;
+                border-block-style: circle;
+                padding: 0px 9px;
+            }
+
+
+.footer{
+    background: #1a1a2e;
+    color: white;
+    padding: 0px 0px;
+    text-align: left;
+    margin-top: 4rem;
+    left: 2rem;
+    align-items: center;
+    margin-top: 500px;
+    margin-bottom: -50px;
+}
+.footer-text{
+    display: inline-block;
+    padding: 1px 0rem;
+}
+.contact-text{
+    display: inline-block;
+    padding: 0%;
+    letter-spacing: 0.2rem;
+}
+.footer-imgs{
+    letter-spacing: 0.5rem;
+    right: 3.5rem;
+    float: right;
+   
+}
+
+.footer-img{
+    width: 26px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+.footer-img:hover{
+    padding-bottom: 0.5rem;
+    transition: 0.2s;
+}
+.main{
+    padding-top: 5rem;
+}
+
+.contact-text{
+    color: white;
+}
+@media only screen and (max-width: 767px){
+    .menu-icon{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 3.5rem;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    border-block-style: circle;
+    }
+    .menu-icon:hover{
+        background: #ee6f57;
+        padding: 0px 5px;
+    }
+    a.logo{
+        position: absolute;
+    }
+    
+    .navigation{
+        width: 100%;
+        margin-top: 1.2rem;
+    }    
+        .navigation ul{
+            display: none;
+        }
+        .show-logo{
+            top: 1rem;
+        }
+        .navigation ul.show{
+            display: block;
+
+        }
+        .navigation ul li{
+                display: block;       
+            }
+                .navigation ul li a{
+                    padding: 5px 0;
+                    transition: 0.2s linear;
+                    border-radius: 5px;
+                }
+                   
+    .show-container{
+        margin-top: 6rem;
+    }}
+    @media only screen and (max-width: 400px){
+        a.logo{
+            position: absolute;
+            left: 2rem;
+        }
+        .menu-icon{
+            right: 1.5rem;            
+        }
+        .logo-nav-container{
+            margin-left: 0%;
+    }
+
+.contact-text{
+    display: none;
+}
+
+.footer-imgs{
+    padding-top: 1rem;
+}}

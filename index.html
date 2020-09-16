@@ -1,94 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <div class="container logo-nav-container">
-            <a href="#" class="logo">LOGO</a>
-            <span class="menu-icon">Ver menu</span>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container logo-nav-container">
+        <a href="#" class="logo">LOGO</a>
+        <span class="menu-icon">Ver menu</span>
+        <nav class="navigation">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main">
-        <div class="container tienda">
-            <h1>Los más vendidos</h1>
-            <div class="productos carousel__contenedor">
-                <img class='arrow-left carousel__anterior' src="img/arrow-circle-left-solid.svg" alt="">
-                <div class="carousel__lista">
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/ryzen7-3700x.png" alt="">
-                        <p class="producto-title">Ryzen 7 3700x</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/i9.png" alt="">
-                        <p class="producto-title">Intel i9 9900k</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/fuente.webp" alt="">
-                        <p class="producto-title">EVGA 550W</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/1660.png" alt="">
-                        <p class="producto-title">ASROCK A320M</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/kumara.png" alt="">
-                        <p class="producto-title">REDRAGON KUMARA</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/zowie.png" alt="">
-                        <p class="producto-title">BENQ ZOWIE 24</p>
-                    </div>
-                    <div class="productotest carousel__elemento">
-                        <img class='producto-imgtest' src="img/mp510.png" alt="">
-                        <p class="producto-title">Corsair MP510</p>
-                    </div>
-                </div>
-                <img class='arrow-right carousel__siguiente' src="img/arrow-circle-right-solid.svg" alt="">
+      <div class="container tienda">
+        <h1>Los más vendidos</h1>
+        <div class="productos carousel__contenedor">
+          <img
+            class="arrow-left carousel__anterior"
+            src="img/arrow-circle-left-solid.svg"
+            alt=""
+          />
+          <div class="carousel__lista">
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/ryzen7-3700x.png" alt="" />
+              <p class="producto-title">Ryzen 7 3700x</p>
             </div>
-            <div role="tablist" class="carousel__indicadores"></div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/i9.png" alt="" />
+              <p class="producto-title">Intel i9 9900k</p>
+            </div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/fuente.webp" alt="" />
+              <p class="producto-title">EVGA 550W</p>
+            </div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/1660.png" alt="" />
+              <p class="producto-title">ASROCK A320M</p>
+            </div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/kumara.png" alt="" />
+              <p class="producto-title">REDRAGON KUMARA</p>
+            </div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/zowie.png" alt="" />
+              <p class="producto-title">BENQ ZOWIE 24</p>
+            </div>
+            <div class="productotest carousel__elemento">
+              <img class="producto-imgtest" src="img/mp510.png" alt="" />
+              <p class="producto-title">Corsair MP510</p>
+            </div>
+          </div>
+          <img
+            class="arrow-right carousel__siguiente"
+            src="img/arrow-circle-right-solid.svg"
+            alt=""
+          />
         </div>
+        <div role="tablist" class="carousel__indicadores"></div>
+      </div>
 
-
-        </div>
-
+      <div class="adivinanza">
+        <h2 class="adivinanza-title">Adivinanza</h2>
+        <p>Cuanto es uno mas uno?</p>
+        <p class="resultado"></p>
+        <input type="text" id="respuesta" placeholder="Respuesta" />
+        <button class="probar">Probar</button>
+      </div>
     </main>
     <footer class="footer" id="footer">
-        <div class="container footer-container">
-            <p class="footer-text">© Mi tienda</p>
+      <div class="container footer-container">
+        <p class="footer-text">© Mi tienda</p>
 
-            <div class='footer-imgs'>
-                <a href="contacto.html">
-                    <p class="contact-text">contacto</p>
-                </a>
-                <a href='https://es-la.facebook.com/' target="_blank"><img class='footer-img' title="facebook"
-                        src="img/facebook.svg" href='https://es-la.facebook.com/' alt="facebook"></a>
-                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img class='footer-img'
-                        src="img/instagram.svg" title="instagram" alt="instagram"></a>
-                <a href="https://web.whatsapp.com/" target="_blank"><img class='footer-img' src="img/whatsapp.svg"
-                        title="whatsapp" alt="whatsapp"></a>
-            </div>
+        <div class="footer-imgs">
+          <a href="contacto.html">
+            <p class="contact-text">contacto</p>
+          </a>
+          <a href="https://es-la.facebook.com/" target="_blank"
+            ><img
+              class="footer-img"
+              title="facebook"
+              src="img/facebook.svg"
+              href="https://es-la.facebook.com/"
+              alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/?hl=es-la" target="_blank"
+            ><img
+              class="footer-img"
+              src="img/instagram.svg"
+              title="instagram"
+              alt="instagram"
+          /></a>
+          <a href="https://web.whatsapp.com/" target="_blank"
+            ><img
+              class="footer-img"
+              src="img/whatsapp.svg"
+              title="whatsapp"
+              alt="whatsapp"
+          /></a>
         </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

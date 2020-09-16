@@ -54,28 +54,49 @@ function main() {
   var probar = document.querySelector(".probar"),
     resultado = document.getElementsByClassName("resultado"),
     respuesta = document.getElementById("respuesta"),
-    cont = 0;
+    adivinanza = document.querySelector(".adivinanza"),
+    respuestaCorrecta =
+      "El Apple I fue uno de los primeros computadores personales, y el primero en combinar un microprocesador con una conexión para un teclado y un monitor. Fue diseñado y hecho a mano por Steve Wozniak originalmente para uso personal. Un amigo de Steve Wozniak, Steve Jobs, tuvo la idea de vender el computador. Fue el primer producto de Apple, demostrado el 1 de abril de 1976 en el Homebrew Computer Club en Palo Alto, California.";
+  cont = 0;
 
   function resultadoTexto(resultado, cantIntentos) {
     if (cantIntentos != undefined) {
-      resultado[0].innerHTML =
-        "Incorrecto, te queda " + cantIntentos + " intentos";
+      if (cantIntentos === 3) {
+        resultado[0].innerHTML =
+          "Incorrecto, te queda " + cantIntentos + " intentos ";
+      }
+      if (cantIntentos === 2) {
+        resultado[0].innerHTML =
+          "Incorrecto, te queda " +
+          cantIntentos +
+          " intentos </br> Pista: Fue diseñada por Steve Wozniak, mejor conocido como Woz, el cofundador de Apple.";
+      }
+      if (cantIntentos === 1) {
+        resultado[0].innerHTML =
+          "Incorrecto, te queda " +
+          cantIntentos +
+          " intentos </br> Pista: Su nombre es 'Apple I'";
+      }
     } else {
-      resultado[0].innerHTML = "Incorrecto, cantidad de intentos agotados";
+      resultado[0].innerHTML =
+        "Incorrecto, ¡cantidad de intentos agotados! </br> </br>" +
+        respuestaCorrecta;
       probar.innerHTML = "Intentar de nuevo!";
       respuesta.classList.add("respuesta");
     }
   }
 
   probar.onclick = function () {
-    if (intentar) {
-      console.log("hola");
+    if (adivinanza.classList.contains("reset")) {
+      location.reload();
     }
+
     var flag = true,
       intentar = false,
       respuestaUsr = document.getElementById("respuesta").value;
-    if (respuestaUsr === "2") {
-      resultado[0].innerHTML = "Correcto!!";
+
+    if (respuestaUsr === "1976") {
+      resultado[0].innerHTML = "Correcto!! " + respuestaCorrecta;
       respuesta.classList.add("respuesta");
       probar.innerHTML = "Intentar de nuevo!";
       flag = false;
@@ -91,6 +112,10 @@ function main() {
       resultadoTexto(resultado);
       intentar = true;
     }
+    if (intentar) {
+      adivinanza.classList.add("reset");
+    }
   };
 }
+
 main();
